@@ -1,0 +1,33 @@
+<!DOCTYPE html> <html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>6.5 // Photo Gallery</title>
+<style>img {
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid gray;
+}
+
+body {
+  font-family: 'Helvetica';
+}</style></head>
+
+<body>
+  <h1>Photo Gallery</h1>
+  <div id="imageContainer"></div>
+  <script src="script.js"></script>
+
+
+<script>
+/*__POPCODESTART__*/
+// Write a query selector that selects #imageContainer
+var container = document.querySelector("#imageContainer"); // Add at least four (4) image urls to this array
+
+var imageUrls = ["https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/MSNBC/Components/Photo/_new/110329-science-probo-6p.jpg", "https://cdn.britannica.com/06/150806-050-6AE99C98/Proboscis-monkey.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR12yjKHjN4gqkN03wSt-fxZCcu5wCFZrP0cUNGZFxGKOcv2Z3LiS8ZbLmiVjRL0K6x1-Y&usqp=CAU", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_dsHekDUyxqOvmhNddK36VHq1fbIT7uZe6BxxC4YcEIgxN-GwMpJN-8Xse_HG5dpatZ4&usqp=CAU"]; // Write your for of loop using .insertAdjacentHTML below
+
+for (var _i = 0, _imageUrls = imageUrls; _i < _imageUrls.length; _i++) {
+  var image = _imageUrls[_i];
+  container.insertAdjacentHTML("beforeend", "<img src='" + image + "'>");
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImNvbnRhaW5lciIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsImltYWdlVXJscyIsImltYWdlIiwiaW5zZXJ0QWRqYWNlbnRIVE1MIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLElBQUlBLFNBQVMsR0FDYkMsUUFBUSxDQUFDQyxhQUFULENBQXVCLGlCQUF2QixDQURBLEMsQ0FFQTs7QUFDQSxJQUFJQyxTQUFTLEdBQUcsQ0FDaEIsdUlBRGdCLEVBRWYsd0VBRmUsRUFHZixzSUFIZSxFQUlmLHNJQUplLENBQWhCLEMsQ0FPQTs7QUFDQSw4QkFBa0JBLFNBQWxCLGdDQUE2QjtBQUF4QixNQUFJQyxLQUFLLGlCQUFUO0FBQ0RKLEVBQUFBLFNBQVMsQ0FBQ0ssa0JBQVYsQ0FBNkIsV0FBN0IsRUFBeUMsZUFBZUQsS0FBZixHQUF1QixJQUFoRTtBQUVIIiwic291cmNlc0NvbnRlbnQiOlsiLy8gV3JpdGUgYSBxdWVyeSBzZWxlY3RvciB0aGF0IHNlbGVjdHMgI2ltYWdlQ29udGFpbmVyXG5sZXQgY29udGFpbmVyPVxuZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIiNpbWFnZUNvbnRhaW5lclwiKTtcbi8vIEFkZCBhdCBsZWFzdCBmb3VyICg0KSBpbWFnZSB1cmxzIHRvIHRoaXMgYXJyYXlcbmxldCBpbWFnZVVybHMgPSBbXG5cImh0dHBzOi8vbWVkaWEtY2xkbnJ5LnMtbmJjbmV3cy5jb20vaW1hZ2UvdXBsb2FkL3RfZml0LTc2MHcsZl9hdXRvLHFfYXV0bzpiZXN0L01TTkJDL0NvbXBvbmVudHMvUGhvdG8vX25ldy8xMTAzMjktc2NpZW5jZS1wcm9iby02cC5qcGdcIixcbiBcImh0dHBzOi8vY2RuLmJyaXRhbm5pY2EuY29tLzA2LzE1MDgwNi0wNTAtNkFFOTlDOTgvUHJvYm9zY2lzLW1vbmtleS5qcGdcIixcbiBcImh0dHBzOi8vZW5jcnlwdGVkLXRibjAuZ3N0YXRpYy5jb20vaW1hZ2VzP3E9dGJuOkFOZDlHY1IxMnlqS0hqTjRncWtOMDN3U3QtZnhaQ2N1NXdDRlpyUDBjVU5HWkZ4R0tPY3YyWjNMaVM4WmJMbWlWalJMMEs2eDEtWSZ1c3FwPUNBVVwiLFxuIFwiaHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjVF9kc0hla0RVeXhxT3ZtaE5kZEszNlZIcTFmYklUN3VaZTZCeHhDNFljRUlneE4tR3dNcEpOLThYc2VfSEc1ZHBhdFo0JnVzcXA9Q0FVXCJcbl07XG5cbi8vIFdyaXRlIHlvdXIgZm9yIG9mIGxvb3AgdXNpbmcgLmluc2VydEFkamFjZW50SFRNTCBiZWxvd1xuZm9yIChsZXQgaW1hZ2Ugb2YgaW1hZ2VVcmxzKSB7XG4gICAgY29udGFpbmVyLmluc2VydEFkamFjZW50SFRNTChcImJlZm9yZWVuZFwiLFwiPGltZyBzcmM9J1wiICsgaW1hZ2UgKyBcIic+XCIpO1xuXG59Il19</script></body></html>
